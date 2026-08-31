@@ -1,215 +1,212 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Abhijeet AI</title>
+<title>Abhijeet AI</title>
 
-  <meta name="description" content="Abhijeet AI - आपका सरल AI Assistant">
+<meta name="description" content="Abhijeet AI - आपका सरल और तेज AI Assistant">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f3f4f6;
-      color: #111827;
-      min-height: 100vh;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+  min-height: 100vh;
+}
 
-    header {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 22px 15px;
-    }
+header {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 24px 15px;
+}
 
-    header h1 {
-      font-size: 30px;
-      margin-bottom: 6px;
-    }
+header h1 {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
 
-    header p {
-      font-size: 14px;
-      opacity: 0.8;
-    }
+header p {
+  font-size: 14px;
+  opacity: 0.85;
+}
 
-    .container {
-      width: 100%;
-      max-width: 700px;
-      margin: auto;
-      padding: 20px 15px;
-    }
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px 15px;
+}
 
-    .welcome {
-      background: white;
-      padding: 25px 20px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      margin-bottom: 18px;
-    }
+.welcome {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+}
 
-    .welcome h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+.welcome h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-    .welcome p {
-      color: #6b7280;
-      line-height: 1.7;
-    }
+.welcome p {
+  color: #667085;
+  line-height: 1.7;
+}
 
-    .chat-box {
-      background: white;
-      padding: 18px;
-      border-radius: 18px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
+.chat-box {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
 
-    textarea {
-      width: 100%;
-      min-height: 140px;
-      padding: 15px;
-      border: 1px solid #d1d5db;
-      border-radius: 12px;
-      font-size: 16px;
-      resize: vertical;
-      outline: none;
-      font-family: Arial, sans-serif;
-    }
+textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+}
 
-    textarea:focus {
-      border-color: #2563eb;
-    }
+textarea:focus {
+  border-color: #2563eb;
+}
 
-    button {
-      width: 100%;
-      padding: 14px;
-      margin-top: 12px;
-      border: none;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .ask {
-      background: #2563eb;
-      color: white;
-    }
+.ask {
+  background: #2563eb;
+  color: white;
+}
 
-    .ask:hover {
-      background: #1d4ed8;
-    }
+.clear {
+  background: #e5e7eb;
+  color: #172033;
+}
 
-    .clear {
-      background: #e5e7eb;
-      color: #111827;
-    }
+.response {
+  display: none;
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #dbeafe;
+  line-height: 1.7;
+}
 
-    .response {
-      display: none;
-      margin-top: 18px;
-      padding: 16px;
-      border-radius: 12px;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      line-height: 1.7;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px 15px;
-      color: #6b7280;
-      font-size: 13px;
-    }
-  </style>
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  color: #667085;
+  font-size: 13px;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>🤖 Abhijeet AI</h1>
-    <p>Simple • Fast • AI Assistant</p>
-  </header>
+<header>
+  <h1>🤖 Abhijeet AI</h1>
+  <p>Simple • Fast • Your AI Assistant</p>
+</header>
 
-  <main class="container">
+<main class="container">
 
-    <section class="welcome">
-      <h2>नमस्ते! 👋</h2>
+  <section class="welcome">
+    <h2>🙏 स्वागत है</h2>
+    <p>
+      Abhijeet AI में आपका स्वागत है।<br>
+      अपना सवाल नीचे लिखिए और AI से जवाब प्राप्त कीजिए।
+    </p>
+  </section>
 
-      <p>
-        Abhijeet AI में आपका स्वागत है।<br>
-        अपना सवाल नीचे लिखिए।
-      </p>
-    </section>
+  <section class="chat-box">
 
-    <section class="chat-box">
+    <textarea
+      id="question"
+      placeholder="यहाँ अपना सवाल लिखें..."
+    ></textarea>
 
-      <textarea
-        id="question"
-        placeholder="अपना सवाल यहाँ लिखें..."
-      ></textarea>
+    <button class="ask" onclick="askAI()">
+      🤖 Ask Abhijeet AI
+    </button>
 
-      <button class="ask" onclick="askAI()">
-        🤖 Ask Abhijeet AI
-      </button>
+    <button class="clear" onclick="clearQuestion()">
+      Clear
+    </button>
 
-      <button class="clear" onclick="clearQuestion()">
-        Clear
-      </button>
+    <div id="response" class="response"></div>
 
-      <div id="response" class="response"></div>
+  </section>
 
-    </section>
+</main>
 
-  </main>
+<footer>
+  © 2026 Abhijeet AI
+</footer>
 
-  <footer>
-    © 2026 Abhijeet AI
-  </footer>
+<script>
 
-  <script>
-    function askAI() {
+function askAI() {
 
-      const question =
-        document.getElementById("question").value.trim();
+  const question =
+    document.getElementById("question").value.trim();
 
-      const response =
-        document.getElementById("response");
+  const response =
+    document.getElementById("response");
 
-      if (question === "") {
-        response.style.display = "block";
-        response.innerHTML =
-          "⚠️ पहले अपना सवाल लिखिए।";
-        return;
-      }
+  if (!question) {
+    response.style.display = "block";
+    response.innerHTML =
+      "⚠️ कृपया पहले अपना सवाल लिखिए।";
+    return;
+  }
 
-      response.style.display = "block";
+  response.style.display = "block";
 
-      response.innerHTML =
-        "⏳ आपका सवाल प्राप्त हो गया है।<br><br>" +
-        "<strong>Abhijeet AI</strong><br>" +
-        "AI service को अभी जोड़ा जाना बाकी है। " +
-        "अगले चरण में हम वास्तविक AI को इससे connect करेंगे।";
-    }
+  response.innerHTML =
+    "⏳ आपका सवाल प्राप्त हो गया है।<br><br>" +
+    "<strong>Abhijeet AI:</strong><br>" +
+    "अभी AI सेवा को जोड़ा जा रहा है। " +
+    "जल्द ही यहाँ वास्तविक AI जवाब मिलेगा।";
 
-    function clearQuestion() {
+}
 
-      document.getElementById("question").value = "";
+function clearQuestion() {
 
-      document.getElementById("response").style.display =
-        "none";
+  document.getElementById("question").value = "";
 
-      document.getElementById("response").innerHTML = "";
-    }
-  </script>
+  document.getElementById("response").style.display = "none";
+
+  document.getElementById("response").innerHTML = "";
+
+}
+
+</script>
 
 </body>
 </html>
